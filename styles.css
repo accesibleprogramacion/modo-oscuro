@@ -1,0 +1,104 @@
+[data-theme="light"] {
+    --primary: #2a83d6;
+    --background: #fff;
+    --text: #000;
+}
+
+[data-theme="dark"] {
+    --primary: #e9833e;
+    --background: #000;
+    --text: #fff;
+}
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+    font-family: 'Roboto Serif', serif;
+    margin: 0;
+}
+
+h1 {
+    color: #fff;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    padding: 20px 10px;
+}
+
+main {
+    padding: 0 20px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+article {
+    margin-top: 20px;
+}
+
+button {
+    background-color: var(--primary);
+    padding: 10px;
+    border: none;
+    font-family: 'Roboto Serif', serif;
+    color: #fff;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Estilos del switch */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--primary);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+  
+input:checked + .slider {
+    background-color: var(--background);
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
